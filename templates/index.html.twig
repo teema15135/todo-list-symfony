@@ -1,0 +1,9 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Todo list by Teema{% endblock %}
+{% block body %}
+    <form method="post" action="/login">
+        <input id="name" name="name" type="text" placeholder="Enter your name..." />
+        <button type="submit">{{ button_label }}</button>
+    </form>
+{% endblock %}

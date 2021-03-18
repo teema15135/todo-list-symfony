@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Todo list by Teema{% endblock %}
+{% block body %}
+    <h1>{{ name }}'s todo list</h1>
+    
+    <form method="post" action="/todo/new">
+        <input id="task" name="task" type="text" />
+        <button type="submit">New item</button>
+    </form>
+
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task }}
+        {% endfor %}
+    </ul>
+
+    <form method="post" action="/logout">
+        <button type="submit">Logout</button>
+    </form>
+{% endblock %}
